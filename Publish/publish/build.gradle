@@ -1,0 +1,32 @@
+plugins {
+    id "maven-publish"
+}
+
+ext {
+    versionName = "m98"
+}
+
+configurations.maybeCreate("default")
+def aarArtifact = artifacts.add("default", file("libwebrtc-${ext.versionName}.aar"))
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/WebRTSP/libWebRTC-Android")
+            credentials {
+                username = project.findProperty("gpr.libwebrtc_publish_user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.libwebrtc_publish_key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            artifact aarArtifact
+
+            groupId = 'org.webrtsp'
+            artifactId = 'libwebrtc'
+            version = project.versionName
+        }
+    }
+}
