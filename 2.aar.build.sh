@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-./checkout.sh
+./1.checkout.sh
 
 export PATH=$PATH:$PWD/depot_tools
 

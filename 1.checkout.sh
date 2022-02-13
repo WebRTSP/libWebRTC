@@ -13,7 +13,7 @@ if [ "$(git rev-parse --abbrev-ref HEAD)" != "$NAME" ]; then
 	git checkout -b $NAME refs/remotes/branch-heads/$BRANCH
 
 	echo Syncing...
-	gclient sync
+	gclient sync -D
 
 fi
 
