@@ -3,7 +3,11 @@ plugins {
 }
 
 ext {
-    versionName = "m98"
+    versionName = "${System.env.LIBWEBRTC_VERSION_NAME}"
+}
+
+if(ext.versionName.isEmpty()) {
+	throw new GradleException('Missing LIBWEBRTC_VERSION_NAME env variable')
 }
 
 configurations.maybeCreate("default")
