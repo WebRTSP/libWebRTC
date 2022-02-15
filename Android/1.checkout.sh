@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. ./version.sh
+. ../version.sh
 
 export PATH=$PATH:$PWD/depot_tools
 
