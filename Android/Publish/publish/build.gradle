@@ -17,7 +17,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/WebRTSP/libWebRTC-Android")
+            url = uri("https://maven.pkg.github.com/WebRTSP/libWebRTC")
             credentials {
                 username = project.findProperty("gpr.libwebrtc_publish_user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.libwebrtc_publish_key") ?: System.getenv("TOKEN")
