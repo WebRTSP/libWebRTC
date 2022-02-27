@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-. ../version.sh
+. ./2.aar.build.sh
 
 cd ./Publish
 
