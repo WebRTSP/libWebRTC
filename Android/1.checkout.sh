@@ -14,4 +14,4 @@ if [ "$(git rev-parse --abbrev-ref HEAD)" != "$LIBWEBRTC_VERSION_NAME" ]; then
 	gclient sync -D
 fi
 
-cd -
+cd - > /dev/null

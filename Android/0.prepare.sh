@@ -12,5 +12,5 @@ if [ ! -d "WebRTC.org" ]; then
 	mkdir WebRTC.org
 	cd WebRTC.org
 	fetch --nohooks webrtc_android
-	cd -
+	cd - > /dev/null
 fi

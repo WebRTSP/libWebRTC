@@ -12,4 +12,4 @@ ninja -C ../../debug/arm libwebrtc libjingle_peerconnection_so
 gn gen ../../debug/arm64 --args='is_debug=true target_cpu="arm64" target_os="android" strip_debug_info=false'
 ninja -C ../../debug/arm64 libwebrtc libjingle_peerconnection_so
 
-cd -
+cd - > /dev/null

@@ -6,4 +6,4 @@ cd ./Publish
 
 ./gradlew :publish:publish
 
-cd -
+cd - > /dev/null
