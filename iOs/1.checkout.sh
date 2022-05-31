@@ -5,7 +5,7 @@
 cd WebRTC.org/src/
 
 if [ "$(git rev-parse --abbrev-ref HEAD)" != "$LIBWEBRTC_VERSION_NAME" ]; then
-	if [[ $LIBWEBRTC_VERSION_NAME == *patched ]]; then
+	if [[ $LIBWEBRTC_VERSION_NAME == *-patched* ]]; then
 		echo Fetching from repo with patched WebRTC
 		git fetch patched
 		echo Checking out "$LIBWEBRTC_VERSION_NAME"...
